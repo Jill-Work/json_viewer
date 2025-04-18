@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Code, FileText, GitCompare } from "lucide-react";
 import { usePopupContext } from "@/context/popup-context";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   const { openJsonFormatter, openJsonDiff, openTextDiff } = usePopupContext();
@@ -92,6 +93,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <SpeedInsights />
     </div>
   );
 }
