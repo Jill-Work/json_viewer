@@ -9,6 +9,7 @@ import { PopupProvider } from "@/context/popup-context";
 import { JsonFormatterPopup } from "@/components/json-formatter-popup";
 import { JsonDiffPopup } from "@/components/json-diff-popup";
 import { TextDiffPopup } from "@/components/text-diff-popup";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,6 +45,7 @@ export default function RootLayout({
             <JsonDiffPopup />
             <TextDiffPopup />
             <Toaster />
+            <Analytics />
           </PopupProvider>
         </ThemeProvider>
       </body>
